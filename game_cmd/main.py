@@ -200,3 +200,6 @@ if menu_quest in 'A':
          else:
             os.system('cls' or 'clear')
             print('chute')
+            
+            
+            
