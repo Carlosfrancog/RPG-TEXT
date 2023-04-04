@@ -2,8 +2,8 @@ import random
 from time import sleep
 import os
 
-os.system('cls' or 'clear')
-
+def clear_screen():
+    os.system('cls' if os.name == 'nt' else 'clear')
 
 
 print("""
@@ -47,7 +47,7 @@ while menu_quest not in 'ABC':
 
 if menu_quest in 'A':
    sleep(0.5)
-   os.system('cls' or 'clear')
+   clear_screen()
    print('''
             Olá forasteiro, vejo que não é desse mundo! 
             Me diga então seu nome para que eu possa me lembrar de você
@@ -71,7 +71,7 @@ if menu_quest in 'A':
                            (____/ \____)''')
       
    name = str(input('DIGITE AQUI O SEU NOME: '))
-   os.system('cls' or 'clear')
+   clear_screen()
    print(f'Muito bem, {name}')
    print(f'''
             Alguma vez você já se perguntou se controla realmente suas ações
@@ -128,10 +128,10 @@ if menu_quest in 'A':
                             ___)=|=(___
                            (____/ \____)''')
       sleep(1.5)
-      os.system('cls' or 'clear')
+      clear_screen()
    else:
       sleep(1.5)
-      os.system('cls' or 'clear')
+      clear_screen()
       print('''
             Você aceitou o desafio de Pixie duente.
             
@@ -171,13 +171,13 @@ if menu_quest in 'A':
                               [C] Dar uma cabeçada na janela
                               ESCOLHA AQUI:''')).upper()[0]
          if quest in 'A':
-            os.system('cls' or 'clear')
+            clear_screen()
             print('SOCO')
          elif quest in 'B':
-            os.system('cls' or 'clear')
+            clear_screen()
             print('PORTA')
          else:
-            os.system('cls' or 'clear')
+            clear_screen()
             print('CABEÇA')
             
       else: #resposta ir para a porta
@@ -195,10 +195,10 @@ if menu_quest in 'A':
                               [B] Dar um chute na porta
                               ESCOLHA AQUI:''')).upper()[0]
          if quest in 'A':
-            os.system('cls' or 'clear')
+            clear_screen()
             print('Soco')
          else:
-            os.system('cls' or 'clear')
+            clear_screen()
             print('chute')
             
             
